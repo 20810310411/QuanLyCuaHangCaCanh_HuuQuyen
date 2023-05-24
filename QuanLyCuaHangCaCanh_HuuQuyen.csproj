@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA9CE13C-4ACB-4B7A-B76B-E65AFF87D4DB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyCuaHangCaCanh_KhacTu</RootNamespace>
+    <AssemblyName>QuanLyCuaHangCaCanh_KhacTu</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CacForm\DangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CacForm\DangKy.designer.cs">
+      <DependentUpon>DangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CacForm\DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CacForm\DangNhap.designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CacForm\HangCaCanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CacForm\HangCaCanh.Designer.cs">
+      <DependentUpon>HangCaCanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CacForm\HeThongQuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CacForm\HeThongQuanLy.Designer.cs">
+      <DependentUpon>HeThongQuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CacForm\HoaDonBanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CacForm\HoaDonBanHang.Designer.cs">
+      <DependentUpon>HoaDonBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CacForm\KhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CacForm\KhachHang.Designer.cs">
+      <DependentUpon>KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CacForm\NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CacForm\NhanVien.Designer.cs">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CacForm\QuenMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CacForm\QuenMatKhau.Designer.cs">
+      <DependentUpon>QuenMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CacForm\TimKiemHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CacForm\TimKiemHoaDon.Designer.cs">
+      <DependentUpon>TimKiemHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KetNoi\Connection.cs" />
+    <Compile Include="KetNoi\ConnectSQL.cs" />
+    <Compile Include="KetNoi\Function.cs" />
+    <Compile Include="KetNoi\HamGoi.cs" />
+    <Compile Include="KetNoi\KetNoi.cs" />
+    <Compile Include="KetNoi\Modify.cs" />
+    <Compile Include="KetNoi\TaiKhoan.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CacForm\DangKy.resx">
+      <DependentUpon>DangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CacForm\DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CacForm\HangCaCanh.resx">
+      <DependentUpon>HangCaCanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CacForm\HeThongQuanLy.resx">
+      <DependentUpon>HeThongQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CacForm\HoaDonBanHang.resx">
+      <DependentUpon>HoaDonBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CacForm\KhachHang.resx">
+      <DependentUpon>KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CacForm\NhanVien.resx">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CacForm\QuenMatKhau.resx">
+      <DependentUpon>QuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CacForm\TimKiemHoaDon.resx">
+      <DependentUpon>TimKiemHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon\add_32px.png" />
+    <Content Include="icon\class_35px.png" />
+    <Content Include="icon\close_16px.png" />
+    <Content Include="icon\close_32px.png" />
+    <Content Include="icon\dangnhap_con.ico" />
+    <Content Include="icon\diem_35px.png" />
+    <Content Include="icon\exporExcel_35px.png" />
+    <Content Include="icon\exportPDF_35px.png" />
+    <Content Include="icon\gif_search.gif" />
+    <Content Include="icon\hinhdangky.ico" />
+    <Content Include="icon\icons8-matrix-desktop-35.png" />
+    <Content Include="icon\icons8-subjects-35.png" />
+    <Content Include="icon\input-keyboard-icon.png" />
+    <Content Include="icon\insert_24px.png" />
+    <Content Include="icon\khoa_35px.png" />
+    <Content Include="icon\lammoi_40px.png" />
+    <Content Include="icon\logout_16px.png" />
+    <Content Include="icon\monhoc_35px.png" />
+    <Content Include="icon\password_30px.png" />
+    <Content Include="icon\search_35px.png" />
+    <Content Include="icon\student_24px.png" />
+    <Content Include="icon\student_35px.png" />
+    <Content Include="icon\taikhoan_32px.png" />
+    <Content Include="icon\teacher_32px.png" />
+    <Content Include="icon\teacher_35px.png" />
+    <Content Include="icon\thungrac_32px.png" />
+    <Content Include="icon\tinhtoan_35px.png" />
+    <Content Include="icon\update_32px.png" />
+    <Content Include="icon\user_30px.png" />
+    <Content Include="icon\user_50px.png" />
+    <Content Include="img\anh_user.png" />
+    <Content Include="img\dangnhap_con.png" />
+    <Content Include="img\dhluat.png" />
+    <Content Include="img\gif_user.gif" />
+    <Content Include="img\hinhdangky.png" />
+    <Content Include="img\hoctap.jpg" />
+    <Content Include="img\kythuatCN.png" />
+    <Content Include="img\logonhom.jpg" />
+    <Content Include="img\logo_dh.jpg" />
+    <Content Include="img\logo_home.jpg" />
+    <Content Include="img\logo_truong.png" />
+    <Content Include="img\monhoc_35px.ico" />
+    <Content Include="img\nguoiquanly_ico.ico" />
+    <Content Include="img\taoanhdep_khoahocvientuong_88233.jpg" />
+    <Content Include="img\user_anh.jpg" />
+    <Content Include="img\YxpMgT87kdpb.gif" />
+    <Content Include="img\ZEbd.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
